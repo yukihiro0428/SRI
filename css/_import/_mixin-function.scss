@@ -1,0 +1,38 @@
+//color
+$key-blue: #003993;
+$key-green: #109954;
+$key-gray: #4D4D4D;
+
+@mixin m-hover {
+  transition: 0.5s;
+  &:hover {
+    color: $key-green;
+    transition: 0.5s;
+    cursor : pointer;
+  }
+}
+// ブレークポイント
+//pcファースト
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "Plus": "screen and (max-width: 1080px)",
+  "xs": "screen and (max-width: 1242px)",
+  "1670": "screen and (max-width: 1670px)",
+  "pc": "screen and (max-width: 1919px)",
+);
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//z-index
+$layer: (
+  modal: 100,
+  header: 20,
+  tooltip: 10,
+  default: 1,
+);
+@mixin z-index($key) {
+  z-index: map-get($layer, $key);
+}
