@@ -3,3 +3,4 @@ Illustratorでデザイン済みデータをコーデングとWordPressまで実
 WordPressの動的はカスタム投稿、デフォルト投稿を一覧表示及びリンク付け、サイト内検索機能を実装
 
 jQueryのプラグインはswiperのみ
+
